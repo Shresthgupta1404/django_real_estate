@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <br>
+	<h2 class="text-center font-weight-light text-success mt-3"><b>upload your property's picture :</b></h2>
+	<div class="text-center">
+		<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*"/>
+	</div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
+
+
+<!--
+<html>
+<body>
+	<div class="image-upload-wrap">
+		<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+		<div class="file-upload-content">
+			<img class="file-upload-image" src="#" alt="your image" />
+			<div class="image-title-wrap">
+			</div>
+		</div>
+	</div></body>
+	</html>
+
+
+	-->
+
+
+	<div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Property Description</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a" method="POST" action="/uploadFile">{%csrf_token%}
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">Description</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword" name="Keyword" id="Keyword">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control form-control-lg form-control-a" id="Type">
+                <option>All Type</option>
+                <option>For Rent</option>
+                <option>For Sale</option>
+                <option>Open House</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">City</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>All City</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Lucknow</option>
+                <option>Chennai</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">Bedrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">Garages</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">Bathrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price"> Price</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>Unlimite</option>
+                <option>₹50,000</option>
+                <option>₹100,000</option>
+                <option>₹150,000</option>
+                <option>₹200,000</option>
+              </select>
+            </div>
+          </div>
+          <p class="btn btn-success" >SUBMIT</p>
+        </div>
+      </form>
+    </div>
+  </div>
